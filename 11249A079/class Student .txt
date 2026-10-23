@@ -1,0 +1,48 @@
+class Student {
+    String name;
+    int roll Number;
+    int marks;
+
+    // Constructor
+    Student(String name, int roll Number , int marks) {
+        this.name = name;
+        this.roll Number = roll Number;
+        this. marks = marks;
+    }
+
+    // Method to calculate grade
+    char calculate Grade() {
+        if (marks >= 90)
+            return 'A';
+        else if (marks >= 75)
+            return 'B';
+        else if (marks >= 60)
+            return 'C';
+        else if (marks >= 50)
+            return 'D';
+        else
+            return 'F';
+    }
+
+    // Method to display student information
+    void display Info() {
+        System .out .print ln("Name       : " + name);
+        System .out .print ln("Roll Number: " + roll Number);
+        System .out .print ln("Marks      : " + marks);
+        System .out .print ln("Grade      : " + calculate Grade());
+        System .out .print ln("-------------------------");
+    }
+}
+
+public class Student Management {
+    public static void main(String[] args) {
+
+        // Creating two student objects
+        Student s1 = new Student("Arun", 101, 85);
+        Student s2 = new Student("Priya", 102, 92);
+
+        // Displaying student details
+        s1.displayInfo();
+        s2.displayInfo();
+    }
+}
